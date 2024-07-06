@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  server:
+    build: ./server
+    container_name: server 
+    ports:
+      - "3001:3001"
+    environment: 
+      - mongodb+srv://abhishekbasvrajgowda:qeMg9gg8zIq3WU3K@cluster0.ykctmzw.mongodb.net/
+  client:
+    build: ./client
+    container_name: client
+    ports :
+    - "3000:80"
